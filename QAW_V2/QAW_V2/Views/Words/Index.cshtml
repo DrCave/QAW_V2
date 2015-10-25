@@ -1,0 +1,66 @@
+﻿@model IEnumerable<QAW_V2.Models.Word>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Word
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Definitions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Syllabification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pronunciation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Origin)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Definitions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Syllabification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pronunciation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origin)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Word1 }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Word1 }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Word1 })
+        </td>
+    </tr>
+}
+
+</table>

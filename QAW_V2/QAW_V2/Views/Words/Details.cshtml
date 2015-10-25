@@ -1,0 +1,66 @@
+﻿@model QAW_V2.Models.Word
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Word</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Definitions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Definitions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Syllabification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Syllabification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pronunciation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pronunciation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Origin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Word1 }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
